@@ -1,0 +1,31 @@
+
+input,select{
+    border: 3px solid rgb(6, 174, 204);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button{
+    border: 3px solid rgb(134, 134, 117);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+h1,form{
+    text-align: center;
+}
+
+#contain{
+    border: 3px solid black;
+    width: fit-content;
+    padding: 5px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    background-color: khaki;
+}
+body{
+    background-color: lightslategrey;
+}
+

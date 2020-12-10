@@ -5,13 +5,13 @@
         var member  = document.getElementById("Members").value;
         var option = document.getElementById("option").value;
 
-        const tips = option === "%" ? (((tipamount/100)*billamount)/member): tipamount;
-
-        const totalBill = (((billamount/member) + tips))
+        const tips = option === "%" ? (Math.floor(((tipamount/100)*billamount)/member)): tipamount;
+        console.log(tips)
+        const totalBill = (Math.floor((billamount/member) + tips))
 
     
 
-        document.getElementById('tips').innerHTML =`Tip Amount ${tips.toPrecision(4)} \t per head`;
-        document.getElementById('total').innerHTML = `Total Amount ${totalBill.toPrecision(4)} \t per head`
+        document.getElementById('tips').innerHTML =`Tip Amount ${tips} \t per head`;
+        document.getElementById('total').innerHTML = `Total Amount ${totalBill} \t per head`
 
 }
