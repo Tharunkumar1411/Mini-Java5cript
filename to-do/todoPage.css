@@ -1,0 +1,15 @@
+#nav{
+    background-color: lawngreen;
+    padding: 10px;
+}
+#navimg{
+    width:15px;
+    background-color: black;
+}
+
+#plus{
+    border: none;
+    background:none;
+    margin-left:40%;
+}
+

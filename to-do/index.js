@@ -9,6 +9,7 @@ function validate(Email){
 
 }
 
+
 //form submission function
 function submiting(){
  var userName = document.getElementById('uname').value;
@@ -18,7 +19,7 @@ function submiting(){
     document.getElementById('uname').style.borderColor = "red"
  }
  else if(validate(Email)){
-     
+    todolist()
  }else{
     document.getElementById('ename').style.borderColor = "red"
  }
@@ -27,13 +28,11 @@ function submiting(){
 //create a form input fields
 function formHandle(){
     var user = document.createElement('input');
-    user.setAttribute("type","text");
     user.setAttribute("id","uname");
     user.setAttribute("placeholder","username");
     document.getElementById("user").appendChild(user);
 
     var email = document.createElement("input");
-    email.setAttribute("type","email");
     email.setAttribute("placeholder","Email");
     email.setAttribute("id","ename");
     document.getElementById("email").appendChild(email);
