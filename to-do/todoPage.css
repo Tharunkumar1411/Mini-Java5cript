@@ -50,3 +50,8 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+#submit{
+    float: right;
+    margin-top: 30px;
+}

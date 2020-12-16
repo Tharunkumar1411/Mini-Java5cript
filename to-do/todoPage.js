@@ -11,18 +11,12 @@ function todoPage(){
  }
  
 function plusOnclick() {
-    var ModelWork = document.createElement("input");
-    document.getElementById("modelPurpose").appendChild(ModelWork);
-  
-
-    var DeadLine = document.createElement("input");
-    DeadLine.setAttribute("type","time");
-    document.getElementById("EndTime").appendChild(DeadLine);
+    
 
     document.getElementById("model").style.display = "block";
 
     var span = document.getElementsByClassName("close")[0];
-    span.onclick  = function() {document.getElementById("model").style.display="none",document.getElementById("modelPurpose").style.display="none"}
+    span.onclick  = function() {document.getElementById("model").style.display="none"}
     
 }
 
