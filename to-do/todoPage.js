@@ -1,24 +1,19 @@
 function navOnclick(){
     alert("working")
 }
-
- 
+                                                                                                    
 function plusOnclick() {
-    
-
     document.getElementById("model").style.display = "block";
 
     var DoneButton = document.getElementById("submit");
     DoneButton.onclick = function() {
-        // const purposeValue = document.getElementById("modelPurpose").value;
-        // const EndTime = document.getElementById("EndTime").value;
+        const purposeValue = document.getElementById("modelPurpose").value;
+        const EndTime = document.getElementById("EndTime").value;
         document.getElementById("model").style.display="none";
-
     }
 
     var span = document.getElementsByClassName("close")[0];
     span.onclick  = function() {document.getElementById("model").style.display="none"}
-    
 }
 
 function todoPage(){
