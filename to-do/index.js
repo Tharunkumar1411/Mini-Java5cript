@@ -19,7 +19,7 @@ function submiting(){
     document.getElementById('uname').style.borderColor = "red"
  }
  else if(validate(Email)){
-    todolist()
+    jwt()
  }else{
     document.getElementById('ename').style.borderColor = "red"
  }
