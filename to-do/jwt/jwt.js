@@ -4,16 +4,28 @@ function resultEncode(rawStr){
     return result
 }
 
-function resultDecode(encStr){
-    var wordArrayEn = CryptoJS.enc.Base64.parse(encStr)
-    var resultEn = wordArrayEn.toString(CryptoJS.enc.Utf8)
-    return resultEn
+function decodeToken(encStr){
+    var wordArray = CryptoJS.enc.Base64.parse(encStr)
+    var decodedToken = wordArray.toString(CryptoJS.enc.Utf8)
+    return decodedToken;
 }
 
 function jwt(){
-    console.log("ji")
-    var userDecode = document.getElementById("uname").value;
-    var token = resultEncode(userDecode)
-    var encode = resultDecode(token)
-    console.log(token,encode)
+    var emailHasing = document.getElementById("ename").value;
+    var token = resultEncode(emailHasing)
+    localStorage.setItem("token",token)
+    
+}
+
+function chckingJWT(){
+    var getToken_fromLocalStorage = localStorage.getItem("token");
+
+    if(getToken_fromLocalStorage !== null){
+        console.log(getToken_fromLocalStorage)
+        console.log(decodeToken(getToken_fromLocalStorage))
+        
+        
+    }else{
+        formHandle()
+    }
 }
