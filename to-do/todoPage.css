@@ -1,6 +1,7 @@
 #nav{
     background-color: lawngreen;
     padding: 10px;
+    visibility: hidden;
 }
 #navimg{
     width:15px;
@@ -15,6 +16,7 @@
     border-radius: 25px;
     background: none;
     margin-left:40%;
+    visibility: hidden;
 }
 
 #model{

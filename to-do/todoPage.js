@@ -16,9 +16,12 @@ function plusOnclick() {
     span.onclick  = function() {document.getElementById("model").style.display="none"}
 }
 
-function todoPage(){
 
+function todoPage(){
+    document.getElementById("plus").style.visibility="visible";
     document.getElementById("nav").style.visibility="visible";
+    document.getElementById("form").style.visibility="hidden";
+
  
     document.getElementById("navButton").onclick = function() {navOnclick()}
  
