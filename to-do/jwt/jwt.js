@@ -22,8 +22,13 @@ function chckingJWT(){
 
     if(getToken_fromLocalStorage !== null){
         console.log(getToken_fromLocalStorage)
-        console.log(decodeToken(getToken_fromLocalStorage))
+        var decode = decodeToken(getToken_fromLocalStorage)
         
+        axios.post("http://localhost:3000/test",decode).then(res => {
+            console.log(res)
+        })
+
+    
         
     }else{
         formHandle()
