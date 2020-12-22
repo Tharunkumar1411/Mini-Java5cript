@@ -1,7 +1,11 @@
 function navOnclick(){
     alert("working")
 }
-                                                                                                    
+
+function listCreation(purpose,time){
+    document.getElementById("listCreate").innerHTML = purpose;
+}
+
 function plusOnclick() {
     document.getElementById("model").style.display = "block";
 
@@ -10,10 +14,11 @@ function plusOnclick() {
         const purposeValue = document.getElementById("modelPurpose").value;
         const EndTime = document.getElementById("EndTime").value;
         document.getElementById("model").style.display="none";
+        listCreation(purposeValue,EndTime)
     }
 
     var span = document.getElementsByClassName("close")[0];
-    span.onclick  = function() {document.getElementById("model").style.display="none"}
+    span.onclick  = function() { document.getElementById("model").style.display="none";}
 }
 
 

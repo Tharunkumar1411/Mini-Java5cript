@@ -20,9 +20,10 @@ function jwt(){
 }
 
 function chckingJWT(){
-    var getToken_fromLocalStorage = localStorage.getItem("tken");
+    var getToken_fromLocalStorage = localStorage.getItem("oken");
 
     if(getToken_fromLocalStorage !== null){
+        todoPage()
         console.log(getToken_fromLocalStorage)
         var decode = decodeToken(getToken_fromLocalStorage)
         var data = {"email":decode}
