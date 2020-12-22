@@ -4,6 +4,13 @@ function navOnclick(){
 
 function listCreation(purpose,time){
     document.getElementById("listCreate").innerHTML = purpose;
+    let ema = document.getElementById("ename").value
+
+    var data = {"email":ema}
+        
+    axios.post("http://localhost:3000/addData",data).then(res => {
+        console.log(res.data)
+    })
 }
 
 function plusOnclick() {
