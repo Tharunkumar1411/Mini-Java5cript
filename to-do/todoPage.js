@@ -2,16 +2,22 @@ function navOnclick(){
     alert("working")
 }
 
+
+
 function listCreation(purpose,time){
     document.getElementById("listCreate").innerHTML = purpose;
-    let ema = document.getElementById("ename").value
+    let email = document.getElementById("ename").value
 
-    var data = {"email":ema}
+    let submitDate = new Date().toLocaleDateString();
+
+    var data = {"email":email,"item":purpose,"Endtime":time,"submitDate":submitDate}
         
-    axios.post("http://localhost:3000/addData",data).then(res => {
+    axios.post("http://localhost:3000/emailAuthenticate",data).then(res => {
         console.log(res.data)
     })
 }
+
+
 
 function plusOnclick() {
     document.getElementById("model").style.display = "block";
@@ -29,6 +35,8 @@ function plusOnclick() {
 }
 
 
+
+
 function todoPage(){
     document.getElementById("plus").style.visibility="visible";
     document.getElementById("nav").style.visibility="visible";
@@ -40,6 +48,8 @@ function todoPage(){
     document.getElementById("plus").onclick = function() {plusOnclick()}
  }
 
+
+ 
 function todolist(){
     document.getElementById("form").style.visibility = "hidden"
     todoPage()

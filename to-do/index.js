@@ -1,3 +1,5 @@
+
+
 //validate a email 
 function validate(Email){
    const tst = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -19,6 +21,11 @@ function submiting(){
     document.getElementById('uname').style.borderColor = "red"
  }
  else if(validate(Email)){
+    let email = {"email":Email}
+   axios.post("http://localhost:3000/createDatabase",email).then(res => {
+      console.log(res.data)
+  })
+
     jwt()
  }else{
     document.getElementById('ename').style.borderColor = "red"
