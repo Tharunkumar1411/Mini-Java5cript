@@ -10,7 +10,7 @@ function listCreation(purpose,time){
 
     let submitDate = new Date().toLocaleDateString();
 
-    var data = {"email":email,"item":purpose,"Endtime":time,"submitDate":submitDate}
+    var data = {"e":email,"item":purpose,"Endtime":time,"submitDate":submitDate}
         
     axios.post("http://localhost:3000/emailAuthenticate",data).then(res => {
         console.log(res.data)
