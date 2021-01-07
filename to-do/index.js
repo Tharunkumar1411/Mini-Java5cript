@@ -3,12 +3,11 @@
 //validate a email 
 function validate(Email){
    const tst = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
    if(tst.test(Email)){
        return true
-   }else{
-       return false
    }
-
+  
 }
 
 
@@ -22,9 +21,9 @@ function submiting(){
  }
  else if(validate(Email)){
     let email = {"email":Email}
-//    axios.post("http://localhost:3000/createDatabase",email).then(res => {
-//       console.log(res.data)
-//   })
+   axios.post("http://localhost:3000/createDatabase",email).then(res => {
+      console.log(res.data)
+  })
 
     jwt()
  }else{

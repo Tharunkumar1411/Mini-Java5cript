@@ -2,31 +2,37 @@ function navOnclick(){
     alert("working")
 }
 
-
-
 function listCreation(purpose,time){
     document.getElementById("listCreate").innerHTML = purpose;
-    let email = document.getElementById("ename").value
+   
 
+    var getToken_fromLocalStorage = localStorage.getItem("token");
+
+    if(getToken_fromLocalStorage == null) return   email = document.getElementById("ename").value;
+
+    var email = decodeToken(getToken_fromLocalStorage)
+    
     let submitDate = new Date().toLocaleDateString();
 
-    var data = {"e":email,"item":purpose,"Endtime":time,"submitDate":submitDate}
+    var data = {"email":email,"item":purpose,"Endtime":time,"submitDate":submitDate}
         
     axios.post("http://localhost:3000/emailAuthenticate",data).then(res => {
-        console.log(res.data)
+
     })
 }
 
-
-
 function plusOnclick() {
+    
     document.getElementById("model").style.display = "block";
 
     var DoneButton = document.getElementById("submit");
+
     DoneButton.onclick = function() {
+
         const purposeValue = document.getElementById("modelPurpose").value;
         const EndTime = document.getElementById("EndTime").value;
         document.getElementById("model").style.display="none";
+
         listCreation(purposeValue,EndTime)
     }
 

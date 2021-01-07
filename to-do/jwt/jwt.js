@@ -20,7 +20,7 @@ function jwt(){
 }
 
 function chckingJWT(){
-    var getToken_fromLocalStorage = localStorage.getItem("oken");
+    var getToken_fromLocalStorage = localStorage.getItem("token");
 
     if(getToken_fromLocalStorage !== null){
         todoPage()
