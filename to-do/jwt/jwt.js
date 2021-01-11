@@ -1,3 +1,5 @@
+
+
 function resultEncode(rawStr){
     var wordArray = CryptoJS.enc.Utf8.parse(rawStr)
     var result = CryptoJS.enc.Base64.stringify(wordArray)
@@ -27,8 +29,10 @@ function chckingJWT(){
         console.log(getToken_fromLocalStorage)
         var decode = decodeToken(getToken_fromLocalStorage)
         var data = {"email":decode}
+
         
-        axios.post("http://localhost:3000/emailAuthenticate",data).then(res => {
+        
+        axios.post("http://localhost:3000/FetchData",data).then(res => {
             console.log(res.data)
         })
 

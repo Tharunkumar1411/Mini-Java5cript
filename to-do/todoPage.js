@@ -5,19 +5,12 @@ function navOnclick(){
 function listCreation(purpose,time){
     document.getElementById("listCreate").innerHTML = purpose;
    
-
-    var getToken_fromLocalStorage = localStorage.getItem("token");
-
-    if(getToken_fromLocalStorage == null) return   email = document.getElementById("ename").value;
-
-    var email = decodeToken(getToken_fromLocalStorage)
-    
     let submitDate = new Date().toLocaleDateString();
 
     var data = {"email":email,"item":purpose,"Endtime":time,"submitDate":submitDate}
         
-    axios.post("http://localhost:3000/emailAuthenticate",data).then(res => {
-
+    axios.post("http://localhost:3000/addData",data).then(res => {
+        console.log(res)
     })
 }
 
