@@ -20,10 +20,10 @@ function submiting(){
     document.getElementById('uname').style.borderColor = "red"
  }
  else if(validate(Email)){
-    let email = {"email":Email}
-//    axios.post("http://localhost:3000/createDatabase",email).then(res => {
-//       console.log(res.data)
-//   })
+    var data = {"email":"dd"}
+   axios.post("http://localhost:3000/createDatabase",data).then(res => {
+      console.log(res.data)
+  })
 
     jwt()
  }else{
