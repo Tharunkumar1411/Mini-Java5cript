@@ -4,10 +4,11 @@ function navOnclick(){
 
 function listCreation(purpose,time){
     document.getElementById("listCreate").innerHTML = purpose;
-   
+    
     let submitDate = new Date().toLocaleDateString();
-
-    var data = {"email":email,"item":purpose,"Endtime":time,"submitDate":submitDate}
+    var getToken_fromLocalStorage = localStorage.getItem("token");
+    var ema = decodeToken(getToken_fromLocalStorage)
+    var data = {"email":ema,"purpose":purpose,"Endtime":time,"submitDate":submitDate}
         
     axios.post("http://localhost:3000/addData",data).then(res => {
         console.log(res)
@@ -25,7 +26,7 @@ function plusOnclick() {
         const purposeValue = document.getElementById("modelPurpose").value;
         const EndTime = document.getElementById("EndTime").value;
         document.getElementById("model").style.display="none";
-
+        
         listCreation(purposeValue,EndTime)
     }
 
