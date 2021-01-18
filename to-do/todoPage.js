@@ -46,7 +46,11 @@ function todoPage(){
     document.getElementById("navButton").onclick = function() {navOnclick()}
  
     document.getElementById("plus").onclick = function() {plusOnclick()}
+    fetchPurpose()
+    
  }
+
+
 
 
  

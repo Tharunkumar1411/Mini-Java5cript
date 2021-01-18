@@ -20,7 +20,7 @@ function submiting(){
     document.getElementById('uname').style.borderColor = "red"
  }
  else if(validate(Email)){
-    var data = {"email":Email,"purpose":Email}
+    var data = {"email":Email}
    axios.post("http://localhost:3000/createDatabase",data).then(res => {
       console.log(res.data)
   })
