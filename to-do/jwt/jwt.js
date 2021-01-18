@@ -26,16 +26,6 @@ function chckingJWT(){
 
     if(getToken_fromLocalStorage !== null){
         todoPage()
-        console.log(getToken_fromLocalStorage)
-        var decode = decodeToken(getToken_fromLocalStorage)
-        var data = {"email":decode}
-
-        
-        
-        axios.post("http://localhost:3000/FetchData",data).then(res => {
-            console.log(res.data)
-        })
-
     }else{
         formHandle()
     }

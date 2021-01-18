@@ -11,8 +11,9 @@ function listCreation(purpose,time){
     var data = {"email":ema,"purpose":purpose,"Endtime":time,"submitDate":submitDate}
         
     axios.post("http://localhost:3000/addData",data).then(res => {
-        console.log(res)
+     
     })
+    fetchPurpose()
 }
 
 function plusOnclick() {
