@@ -16,7 +16,19 @@
     border-radius: 25px;
     outline: none;
 }
+#clearinput{
+    width: 20px;
+    height: 10px;
+    border-radius: 5px;
+    outline: none;
+}
 
+#clear{
+    padding: 2px;
+    background-color: aqua;
+    border-radius: 5px;
+    outline: none;
+}
 
 #model{
     display: none;
@@ -58,7 +70,9 @@
 }
 
 #divv{
-  
-    padding: 5px;
-   
+    border-left: 5px solid rgb(59, 178, 224);
+    background-color: rgb(150, 250, 242);
+    width: 80%;
+   padding: 15px;  
 }
+
