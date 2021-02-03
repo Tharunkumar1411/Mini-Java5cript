@@ -7,17 +7,16 @@
     width:15px;
     background-color: black;
 }
-
 #plusImg{
-   width: 50%;
+    height: 15px;
+    background-color: black;
 }
 
-#plus{
+#navButton,#plus{
     border-radius: 25px;
-    background: none;
-    margin-left:40%;
-    visibility: hidden;
+    outline: none;
 }
+
 
 #model{
     display: none;
@@ -59,7 +58,7 @@
 }
 
 #divv{
-    border: 0.1ex solid rgb(206, 133, 224);
+  
     padding: 5px;
-    border-radius: 15px;
+   
 }
