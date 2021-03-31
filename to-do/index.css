@@ -1,6 +1,51 @@
-input{
+input {
     padding: 5px;
 }
-#user,#email,#pass{
+
+body {
+    background-image: url("https://i.pinimg.com/236x/0a/50/be/0a50bec511ff5fff99f9114541793527.jpg");
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#user,
+#email,
+#pass {
     padding: 5px;
+    margin: 10px;
+}
+
+#user,
+#email {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    border-radius: 25px;
+    width: 30%;
+    height: 50%;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    background-color: none;
+}
+
+#form {
+    width: max-content;
+    height: 300px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }

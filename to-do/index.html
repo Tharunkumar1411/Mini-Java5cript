@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="index.js"></script>
-        <link rel="stylesheet" href="index.css">
-        <script src="todoPage.js"></script>
-        <script src="TodoPurposeBox.js"></script>
-        <link rel="stylesheet" href="todoPage.css">
-        <script src="jwt/jwt.js"></script>
-        <script src="jwt/core.js"></script>
-        <script src="jwt/enc-base64.js"></script>
-        <script src="jwt/hmac.js"></script>
-        <script src="jwt/sha256.js"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <title></title>
-    </head>
 
-  
+<head>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="todoPage.js"></script>
+    <script src="TodoPurposeBox.js"></script>
+    <link rel="stylesheet" href="todoPage.css">
+    <script src="jwt/jwt.js"></script>
+    <script src="jwt/core.js"></script>
+    <script src="jwt/enc-base64.js"></script>
+    <script src="jwt/hmac.js"></script>
+    <script src="jwt/sha256.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title></title>
+</head>
 
-    <body onload="chckingJWT()"> 
 
-        <div id="nav">
-            <button id="navButton"><img id="navimg" src="pictures/menu.png"></button>
-            <button id="plus"><strong>+</strong></button>
-            <h4>TODO list</h4>
+
+<body onload="chckingJWT()">
+
+    <div id="nav">
+        <button id="navButton"><img id="navimg" src="pictures/menu.png"></button>
+        <button id="plus"><strong>+</strong></button>
+        <h4>TODO list</h4>
+    </div>
+
+
+    <div>
+        <p id="listCreate"></p>
+    </div>
+
+    <form id="form">
+        <img src="https://png.pngtree.com/png-vector/20191105/ourlarge/pngtree-login-button-black-png-image_1956169.jpg" alt="Avatar" class="avatar">
+        <div id="user" required>
+            <p id="nameerror"></p>
         </div>
+        <div id="email" required></div>
+        <div id="but"></div>
+    </form>
 
-        
-        <div>
-            <p id="listCreate"></p>
+
+
+
+    <div id="model">
+        <div class="model-content">
+            <span class="close">&times;</span>
+            <h5>What is ur purpose <input id="modelPurpose" type="text" required></h5>
+            <h5>EndPoint <input id="EndTime" type="time" required></h5>
+            <button id="submit">Done</button>
         </div>
-      
-        <form id="form">
-            <div id="user"  required><p id="nameerror"></p></div>
-            <div id="email" required></div>   
-           <div id="but"></div>
-        </form>
-
-        
-        
-
-        <div id="model">
-            <div  class="model-content">
-                <span class="close">&times;</span>
-                <h5>What is ur purpose <input  id="modelPurpose" type="text" required></h5>
-                <h5>EndPoint <input  id="EndTime" type="time" required></h5>
-                <button id="submit">Done</button>
-            </div>
-        </div>
+    </div>
 
 
-    </body>
+</body>
+
 </html>
