@@ -29,7 +29,7 @@ function fetchPurpose() {
 
 
 
-            axios.put("http://localhost:3000/removeTodo", dataforRemoveTodo).then(response => {
+            axios.post("http://localhost:3000/removeTodo", dataforRemoveTodo).then(response => {
                 console.log(response)
             })
         }
