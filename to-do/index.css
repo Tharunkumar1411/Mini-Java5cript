@@ -1,5 +1,9 @@
 input {
-    padding: 5px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
 }
 
 body {
@@ -24,8 +28,7 @@ body {
     margin: 10px;
 }
 
-#user,
-#email {
+#but {
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,8 +39,6 @@ img {
     height: 50%;
     display: block;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
     background: none;
     background-color: none;
 }
@@ -46,6 +47,5 @@ img {
     width: max-content;
     height: 300px;
     border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30%;
 }
