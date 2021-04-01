@@ -21,14 +21,13 @@
 }
 
 #clearinput {
-    width: 20px;
-    height: 10px;
     border-radius: 5px;
     outline: none;
+    width: 50px;
 }
 
 #clear {
-    padding: 2px;
+    padding: 8px;
     background-color: aqua;
     border-radius: 5px;
     outline: none;
