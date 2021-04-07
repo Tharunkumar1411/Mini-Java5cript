@@ -34,19 +34,19 @@ function fetchPurpose() {
             })
         }
 
-        var clearinput = document.createElement("input");
-        clearinput.setAttribute("id", "clearinput");
-        clearinput.setAttribute("type", "number");
+        // var clearinput = document.createElement("input");
+        // clearinput.setAttribute("id", "clearinput");
+        // clearinput.setAttribute("type", "number");
 
-        var btn = document.createElement("button");
-        btn.setAttribute("id", "clear")
-        btn.setAttribute("type", "submit");
-        btn.innerHTML = "clear";
+        // var btn = document.createElement("button");
+        // btn.setAttribute("id", "clear")
+        // btn.setAttribute("type", "submit");
+        // btn.innerHTML = "clear";
 
-        mainContainer.appendChild(clearinput)
-        mainContainer.appendChild(btn)
+        // mainContainer.appendChild(clearinput)
+        // mainContainer.appendChild(btn)
 
-        document.getElementById("clear").onclick = function() { clearTodo() }
+        // document.getElementById("clear").onclick = function() { clearTodo() }
 
     })
 }
