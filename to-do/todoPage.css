@@ -2,6 +2,10 @@
     background-color: rgb(103, 86, 110);
     padding: 10px;
     visibility: hidden;
+    border-radius: 25px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #navimg {
